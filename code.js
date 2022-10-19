@@ -1,4 +1,4 @@
-// CS Project
+// CS Project 4485
 // Virtual TA Project
 // Team 9 - Anjum Chida
 
@@ -327,7 +327,7 @@ var possibleInput = {
     commandReset(8);
     return
   },
-  "rick roll" : function()
+  "rick rolls" : function()
   {
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
