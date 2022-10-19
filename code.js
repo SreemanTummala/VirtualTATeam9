@@ -21,14 +21,16 @@ var sendForm = document.querySelector('#chatform'),
 
 sendForm.onkeydown = function(e)
 {
-  if(e.keyCode == 13){
+  if(e.keyCode == 13)
+  {
     e.preventDefault();
 
     //No mix ups with upper and lowercases
     var input = textInput.value.toLowerCase();
 
     //Empty textarea fix
-    if(input.length > 0) {
+    if(input.length > 0)
+    {
       createBubble(input)
     }
   }
