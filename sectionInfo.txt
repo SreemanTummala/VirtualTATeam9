@@ -1,0 +1,18 @@
+232
+professor bob
+pab120003@utdallas.edu
+ECSW 1.002
+12:00pm to 2:00pm Mon/Wed
+tom smith
+tlh160001@utdallas.edu
+ECSS 1.003
+10:00am to 12:00pm Tues
+532
+professor john
+pcj120001@utdallas.edu
+ECSW 1.012
+10:00am to 12:00pm Mon/Wed
+Jay fisher
+jbf160001@utdallas.edu
+ECSS 1.003
+12:00pm to 2:00pm Tues
