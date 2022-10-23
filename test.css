@@ -11,7 +11,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
+div {
+  overflow: hidden;
+  
+}
 body {
   line-height: 1;
 }
@@ -28,7 +31,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -59,7 +61,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.45;
-  background-color: #2e6b0a;
+  /**background-color: #2e6b0a;**/
+ 
 }
 
 .chatbot__overview {
@@ -195,9 +198,16 @@ body {
   }
 }
 .block--background {
-  background-color: #2e6b0a;
-  width: 100vw;
-  height: 100vh;
+  background-image: url("utd_background.jpg");;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: 100%;
+  background-size:cover;
+  background-position: center;
+ 
+  background-repeat: no-repeat;
+ 
 }
 
 #chatform {
@@ -307,3 +317,34 @@ input[type=submit]:hover {
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=test.css.map */
+
+.nav {
+  list-style-type: none;
+  margin: auto;
+  text-align:center;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: inline-block;
+  width: 200vw;
+ 
+ 
+
+  
+}
+#navContainer { text-align: center;
+
+   }
+.nav_element {
+  float:left;
+}
+.link{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
