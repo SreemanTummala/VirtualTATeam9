@@ -235,7 +235,7 @@ body {
 
 textarea[name=chatbox] {
   resize: none;
-  border: 3px solid #e79e00;
+  border: 2px solid #e79e00;
   border-right: 0;
   width: 70%;
   background-color: #fff;
@@ -249,7 +249,7 @@ textarea[name=chatbox] {
 }
 textarea[name=chatbox]:focus {
   outline: none;
-  border: 3px solid #e79e00;
+  border: 2px solid #e79e00;
 }
 
 ::-webkit-input-placeholder {
