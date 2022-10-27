@@ -67,14 +67,14 @@ body {
 
 .chatbot__overview {
   position: relative;
-  top: 150px;
-  background-color: #c0c2bc;
+  top: 55px;
+  background-color: #929292;
   display: flex;
   flex-flow: row nowrap;
   align-content: space-between;
-  max-width: 40em;
-  min-height: 70vh;
-  max-height: 70vh;
+  max-width: 38em;
+  min-height: 78vh;
+  max-height: 78vh;
   margin: 0 auto;
   border: 3px solid #e79e00;
   padding: 1em;
@@ -205,7 +205,6 @@ body {
   width: 100%;
   background-size:cover;
   background-position: center;
- 
   background-repeat: no-repeat;
  
 }
@@ -229,7 +228,7 @@ body {
 .chatbox-area {
   margin: 0 auto;
   position: relative;
-  top: 150px;
+  top: 55px;
   height: auto;
   width: 100%;
 }
