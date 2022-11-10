@@ -215,15 +215,11 @@ body {
   }
 }
 .block--background {
-  background-image: url("newUTD.jpg");;
   height: 100%;
   min-height: 100%;
   max-height: 100%;
   width: 100%;
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
- 
+  background: linear-gradient(0deg, rgb(89, 153, 105), rgb(116, 155, 24) 40%, rgb(179, 125, 63));
 }
 
 #chatform {
