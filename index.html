@@ -6,6 +6,11 @@ Team 9 - Anjum Chida
 
 <main class="page__main">
   <link rel="stylesheet" href="test.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/late/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
 
   <div class="block--background">
     <div id="navContainer">
@@ -36,11 +41,24 @@ Team 9 - Anjum Chida
     </div>
     <div class="chatbox-area">
       <form action="" id="chatform">
-          <textarea placeholder="Type here..." class="chatbox" name="chatbox" resize: "none" minlength="2"></textarea>
+          <textarea placeholder="Type here..." class="chatbox" name="chatbox" resize: "none" minlength="2" id = "type_box"></textarea>
+          <button id = "myBtn" class = "special_symbol">Special Symbols</button>
           <input class="send_button" type="submit" value="ENTER">
       </form>
-      <script src="code.js"></script>
+      
+      
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+	
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <button onclick="buttonClick()"> $$\sum\limits$$</button>
+      </div>
+    
+    </div>
+  
         
-
+    <script src="code.js"></script>
 </main>
