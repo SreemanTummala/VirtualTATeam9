@@ -300,6 +300,10 @@ input[type=submit] {
 }
 .special_symbol {
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+
   border: 0;
   width: 25%;
   margin: 0;

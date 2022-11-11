@@ -214,7 +214,38 @@ function unknownCommand(unkwnCommReaction)
 
   animationCounter = 1;
 }
-
+function summation()
+{
+  document.getElementById("type_box").textContent +=  '\u2211'
+}
+function squareRoot()
+    {
+      document.getElementById("type_box").textContent += '\u221A' + " ";
+    }
+    function Omicron()
+    {
+      document.getElementById("type_box").textContent += '\u039F';
+    }
+    function omicron()
+    {
+      document.getElementById("type_box").textContent += '\u03BF';
+    }
+    function Theta()
+    {
+      document.getElementById("type_box").textContent += '\u0398';
+    }
+    function theta()
+    {
+      document.getElementById("type_box").textContent += '\u03B8';
+    }
+    function Omega()
+    {
+      document.getElementById("type_box").textContent += '\u03A9';
+    }
+    function omega()
+    {
+      document.getElementById("type_box").textContent += '\u03C9';
+    }
 function responseText(e)
 {
 
