@@ -11,7 +11,6 @@ Team 9 - Anjum Chida
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/late/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
   <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
-
   <div class="block--background">
     <div id="navContainer">
       <ul class = "nav">
@@ -45,20 +44,52 @@ Team 9 - Anjum Chida
           <button id = "myBtn" class = "special_symbol">Special Symbols</button>
           <input class="send_button" type="submit" value="ENTER">
       </form>
-      
-      
     </div>
-    <!-- The Modal -->
+
     <div id="myModal" class="modal">
-	
-      <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <button onclick="buttonClick()"> $$\sum\limits$$</button>
+        <button onclick= "buttonClick()">$$\sum\limits$$</button>
+        <button onclick= "squareRoot()">&radic;</button>
+        <button onclick= "Omicron()">&Omicron;</button>
+        <button onclick= "omicron()">&omicron;</button>
+        <button onclick= "Theta()">&Theta;</button>
+        <button onclick= "theta()">&theta;</button>
+        <button onclick= "Omega()">&Omega;</button>
+        <button onclick= "omega()">&omega;</button>
       </div>
-    
     </div>
-  
-        
+     
+    <script>
+    function squareRoot()
+    {
+      document.getElementById("type_box").innerHTML = '\u221A';
+    }
+    function Omicron()
+    {
+      document.getElementById("type_box").innerHTML = '\u039F';
+    }
+    function omicron()
+    {
+      document.getElementById("type_box").innerHTML = '\u03BF';
+    }
+    function Theta()
+    {
+      document.getElementById("type_box").innerHTML = '\u0398';
+    }
+    function theta()
+    {
+      document.getElementById("type_box").innerHTML = '\u03B8';
+    }
+    function Omega()
+    {
+      document.getElementById("type_box").innerHTML = '\u03A9';
+    }
+    function omega()
+    {
+      document.getElementById("type_box").innerHTML = '\u03C9';
+    }
+    </script>
+
     <script src="code.js"></script>
 </main>
