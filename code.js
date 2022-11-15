@@ -24,11 +24,7 @@ sendForm.onkeydown = function(e)
   if(e.keyCode == 13)
   {
     e.preventDefault();
-
-    //No mix ups with upper and lowercases
     var input = textInput.value.toLowerCase();
-
-    //Empty textarea fix
     if(input.length > 0)
     {
       createBubble(input)
@@ -40,16 +36,14 @@ sendForm.addEventListener('submit', function(e)
 {
   //so form doesnt submit page (no page refresh)
   e.preventDefault();
-
   //No mix ups with upper and lowercases
   var input = textInput.value.toLowerCase();
-
-  //Empty textarea fix
   if(input.length > 0)
   {
     createBubble(input)
   }
-}) //end of eventlistener
+})
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -59,21 +53,20 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-document.getElementById('myBtn').addEventListener("click", function() {
+document.getElementById('myBtn').addEventListener("click", function()
+{
   modal.style.display = "block";
 });
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function()
+{
   modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function(event)
+{
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -142,14 +135,8 @@ function buttonClick()
   MathJax.Hub.Queue(["Typeset",MathJax.Hub,"type_box"]);
 }
 
-
-// debugger;
-
 function botResponse(textVal)
 {
-  //sets previous input to that what was called
-  // previousInput = input;
-
   //create response bubble
   var userBubble = document.createElement('li');
   userBubble.classList.add('bot__output');
@@ -169,11 +156,8 @@ function botResponse(textVal)
 
   if(isReaction == false)
   {
-    //Is the command a function?
     if (typeof possibleInput[textVal] === "function")
     {
-      // console.log(possibleInput[textVal] +" is a function");
-    //adds input of textarea to chatbubble list item
       userBubble.innerHTML = possibleInput[textVal]();
     }
     else 
@@ -190,8 +174,6 @@ function botResponse(textVal)
 
 function unknownCommand(unkwnCommReaction)
 {
-  // animationCounter = 1;
-
   //create response bubble
   var failedResponse = document.createElement('li');
 
@@ -219,41 +201,37 @@ function summation()
   document.getElementById("type_box").textContent +=  '\u2211'
 }
 function squareRoot()
-    {
-      document.getElementById("type_box").textContent += '\u221A' + " ";
-    }
-    function Omicron()
-    {
-      document.getElementById("type_box").textContent += '\u039F';
-    }
-    function omicron()
-    {
-      document.getElementById("type_box").textContent += '\u03BF';
-    }
-    function Theta()
-    {
-      document.getElementById("type_box").textContent += '\u0398';
-    }
-    function theta()
-    {
-      document.getElementById("type_box").textContent += '\u03B8';
-    }
-    function Omega()
-    {
-      document.getElementById("type_box").textContent += '\u03A9';
-    }
-    function omega()
-    {
-      document.getElementById("type_box").textContent += '\u03C9';
-    }
+{
+  document.getElementById("type_box").textContent += '\u221A' + " ";
+}
+function Omicron()
+{
+  document.getElementById("type_box").textContent += '\u039F';
+}
+function omicron()
+{
+  document.getElementById("type_box").textContent += '\u03BF';
+}
+function Theta()
+{
+  document.getElementById("type_box").textContent += '\u0398';
+}
+function theta()
+{
+  document.getElementById("type_box").textContent += '\u03B8';
+}
+function Omega()
+{
+  document.getElementById("type_box").textContent += '\u03A9';
+}
+function omega()
+{
+  document.getElementById("type_box").textContent += '\u03C9';
+}
 function responseText(e)
 {
-
   var response = document.createElement('li');
-
   response.classList.add('bot__output');
-
-  //Adds whatever is given to responseText() to response bubble
   response.innerHTML = e;
 
   chatList.appendChild(response);
@@ -273,7 +251,6 @@ function responseText(e)
 function responseImg(e)
 {
   var image = new Image();
-
   image.classList.add('bot__output');
   //Custom class for styling
   image.classList.add('bot__outputImage');
@@ -282,6 +259,7 @@ function responseImg(e)
   chatList.appendChild(image);
 
   animateBotOutput()
+
   if(image.completed)
   {
     chatList.scrollTop = chatList.scrollTop + image.scrollHeight;
@@ -309,113 +287,5 @@ function commandReset(e)
   previousInput = Object.keys(possibleInput)[e];
 }
 
-// hlep
-
-var possibleInput = {
-  // "hlep" : this.help(),
-  "help" : function()
-  {
-    responseText("You can type a command in the chatbox")
-    responseText("Something like &quot;Navvy, please show me Mees&rsquo; best work&quot;")
-    responseText("Did you find a bug or problem? Tweet me @MeesRttn")
-    commandReset(0);
-    return
-  },
-  "best work" : function()
-  {
-    responseText("I will show you Mees' best work!");
-    responseText("These are his <a href='#animation'>best animations</a>")
-    responseText("These are his <a href='#projects'>best projects</a>")
-    responseText("Would you like to see how I was built? (Yes/No)")
-    commandReset(1);
-    return
-  },
-  "about" : function()
-  {
-    responseText("This is me, Navvy's maker, Mees Rutten");
-    responseText("I'm a 22 year old Communication and Multimedia Design student");
-    responseText("My ambition is to become a great Creative Front-End Developer");
-    responseText("Would you like to know about Mees' vision? (Yes/No)");
-    commandReset(2);
-    return
-  },
-  "experience" : function()
-  {
-    responseText("Mees has previously worked at:");
-    responseText("Cobra Systems as web- developer / designer");
-    responseText("BIT Students as web- developer / designer");
-    responseText("MediaMonks as a junior Front-end Developer");
-    commandReset(3);
-    return
-  },
-  "hobbies" : function()
-  {
-    responseText("Mees loves:");
-    responseText("Coding complicated chatbots");
-    responseText("Family time");
-    responseText("Going out with friends");
-    responseText("Working out");
-    commandReset(4);
-    return
-  },
-  "interests" : function()
-  {
-    responseText("Mees loves:");
-    responseText("Coding complicated chatbots");
-    responseText("Family time");
-    responseText("Going out with friends");
-    responseText("Working out");
-    commandReset(5);
-    return
-  },
-  "vision" : function()
-  {
-    responseText("Things I want to learn or do:");
-    responseText("Get great at CSS & JS animation");
-    responseText("Create 3D browser experiences");
-    responseText("Learn Three.js and WebGL");
-    responseText("Combine Motion Design with Front-End");
-    commandReset(6);
-    return
-  },
-  "contact" : function()
-  {
-    responseText("email: <a href='mailto:meesrutten@gmail.com?Subject=Hello%20Mees' target='_top'>send me a message</a>");
-    responseText("Twitter: <a href='https://twitter.com/meesrttn'>@MeesRttn</a>");
-    commandReset(7);
-    return
-  },
-  "commands" : function()
-  {
-    responseText("This is a list of commands Navvy knows:")
-    responseText("help, best work, about, vision, experience, hobbies / interests, contact, rick roll");
-    commandReset(8);
-    return
-  },
-  "rick rolls" : function()
-  {
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  // work experience
-}
-
-var reactionInput = {
-  "best work" : function()
-  {
-    //Redirects you to a different page after 3 secs
-    responseText("On this GitHub page you'll find everything about Navvy");
-    responseText("<a href='https://github.com/meesrutten/chatbot'>Navvy on GitHub</a>")
-    animationCounter = 1;
-    return
-  },
-  "about" : function()
-  {
-    responseText("Things I want to learn or do:");
-    responseText("Get great at CSS & JS animation");
-    responseText("Create 3D browser experiences");
-    responseText("Learn Three.js and WebGL");
-    responseText("Combine Motion Design with Front-End");
-    animationCounter = 1;
-    return
-  }
-}
+var possibleInput = {}
+var reactionInput = {}
