@@ -391,7 +391,7 @@ li a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 780px; /* Location of the box */
+  padding-top: 803px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -405,9 +405,8 @@ li a:hover {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 10px;
-  border: 1px solid #888;
-  width: 35%;
+  padding: 6px;
+  width: 33%;
 }      
 
 /* The Close Button */

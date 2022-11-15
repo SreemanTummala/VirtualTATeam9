@@ -19,7 +19,7 @@ Team 9 - Anjum Chida
         <li class = "nav_element"><a class = "link" href="/contact.html">Contact</a></li>
         <li class = "nav_element"><a class = "link" href="/about.html">About</a></li>
       </ul>
-      </div>
+    </div>
     <div class="chatbot__overview">
       <ul class="chatlist">
         <li class="bot__output bot__output--standard">Hi! I am your Virtual Teaching Assistant.</li>
@@ -42,15 +42,22 @@ Team 9 - Anjum Chida
       <form action="" id="chatform">
           <textarea placeholder="Type here..." class="chatbox" name="chatbox" resize: "none" minlength="2" id = "type_box"></textarea>
           <button id = "myBtn" class = "special_symbol">Special Symbols</button>
-          <input class="send_button" type="submit" value="ENTER">
+          <input class="send_button" type="submit" value="ENTER"></input>
       </form>
     </div>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <button onclick= "summation()">$$\sum\limits$$</button>
+        <button onclick= "summation()">&sum;</button>
         <button onclick= "squareRoot()">&radic;</button>
+        <button onclick= "forall()">&forall;</button>
+        <button onclick= "exist()">&exist;</button>
+        <button onclick= "isin()">&isin;</button>
+        <button onclick= "cap()">&cap;</button>
+        <button onclick= "cup()">&cup;</button>
+        <button onclick= "Lambda()">&Lambda;</button>
+        <button onclick= "lambda()">&lambda;</button>
         <button onclick= "Omicron()">&Omicron;</button>
         <button onclick= "omicron()">&omicron;</button>
         <button onclick= "Theta()">&Theta;</button>

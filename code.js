@@ -198,11 +198,39 @@ function unknownCommand(unkwnCommReaction)
 }
 function summation()
 {
-  document.getElementById("type_box").textContent +=  '\u2211'
+  document.getElementById("type_box").textContent += '\u2211';
 }
 function squareRoot()
 {
-  document.getElementById("type_box").textContent += '\u221A' + " ";
+  document.getElementById("type_box").textContent += '\u221A';
+}
+function forall()
+{
+  document.getElementById("type_box").textContent += '\u2200';
+}
+function exist()
+{
+  document.getElementById("type_box").textContent += '\u2203';
+}
+function isin()
+{
+  document.getElementById("type_box").textContent += '\u2208';
+}
+function cap()
+{
+  document.getElementById("type_box").textContent += '\u2229';
+}
+function cup()
+{
+  document.getElementById("type_box").textContent += '\u222A';
+}
+function Lambda()
+{
+  document.getElementById("type_box").textContent += '\u039B';
+}
+function lambda()
+{
+  document.getElementById("type_box").textContent += '\u03BB';
 }
 function Omicron()
 {
