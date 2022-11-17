@@ -1,0 +1,71 @@
+<!--
+CS Project
+Virtual TA Project
+Team 9 - Anjum Chida
+-->
+
+<main class="page__main">
+  <link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/late/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script type="text/javascript" src="path-to-MathJax/MathJax.js"></script>
+  <div class="block--background">
+    <div id="navContainer">
+      <ul class = "nav">
+        <li class = "nav_element"><a class="active link" href="/index.html">Home</a></li>
+        <li class = "nav_element"><a class = "link" href="/FAQ.html">FAQ</a></li>
+        <li class = "nav_element"><a class = "link" href="/contact.html">Contact</a></li>
+        <li class = "nav_element"><a class = "link" href="/about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="chatbot__overview">
+      <ul class="chatlist">
+        <li class="bot__output bot__output--standard">Hi! I am your Virtual Teaching Assistant.</li>
+        <li class="bot__output bot__output--standard">I can help with all things related to your Advanced Algorithms Course with Professor Chida.</li>
+        <li class="bot__output bot__output--standard">
+          <span class="bot__output--second-sentence"></span>
+          <ul>
+            <span class="input__nested-list">What can I assist you with?</span>
+          </br>
+          </br>
+            <li class="input__nested-list">BigO Notation</li>
+            <li class="input__nested-list">Sorting Algorithms</li>
+            <li class="input__nested-list">Graph Algorithms</li>
+            <li class="input__nested-list">Other General Questions</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="chatbox-area">
+      <form name="ChatBoxTest" id="chatform" method="POST">
+          <textarea placeholder="Type here..." class="chatbox" name="chatbox" resize: "none" minlength="2" id = "type_box"></textarea>
+          <button id = "myBtn" class = "special_symbol">Special Symbols</button>
+          <input class="send_button" name="TestButton" type="submit" value="ENTER"></input>
+      </form>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <button onclick= "summation()">&sum;</button>
+        <button onclick= "squareRoot()">&radic;</button>
+        <button onclick= "forall()">&forall;</button>
+        <button onclick= "exist()">&exist;</button>
+        <button onclick= "isin()">&isin;</button>
+        <button onclick= "cap()">&cap;</button>
+        <button onclick= "cup()">&cup;</button>
+        <button onclick= "Lambda()">&Lambda;</button>
+        <button onclick= "lambda()">&lambda;</button>
+        <button onclick= "Omicron()">&Omicron;</button>
+        <button onclick= "omicron()">&omicron;</button>
+        <button onclick= "Theta()">&Theta;</button>
+        <button onclick= "theta()">&theta;</button>
+        <button onclick= "Omega()">&Omega;</button>
+        <button onclick= "omega()">&omega;</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="{{url_for('static', filename='code.js')}}"></script>
+</main>
